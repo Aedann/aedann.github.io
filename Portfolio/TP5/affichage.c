@@ -17,6 +17,27 @@ int afficheLabyrinthe( int laby[TAILLE_X][TAILLE_Y], int depart[2], int arrivee[
                 printf(" ");
             }else if(laby[j][i]>0){//Pour l'affichage console, on affiche en différente couleur les unités dépassants 10.
                 int dizaine = (laby[j][i] - laby[j][i]%10)/10;
+                if (dizaine >= 0 && dizaine <= 6) {
+                    const char *color;
+                    switch (dizaine % 7) {
+                        case 0: color = "color: red"; break;
+                        case 1: color = "color: green"; break;
+                        case 2: color = "color: yellow"; break;
+                        case 3: color = "color: blue"; break;
+                        case 4: color = "color: magenta"; break;
+                        case 5: color = "color: cyan"; break;
+                        case 6: color = "color: orange"; break;
+                    }
+                    printf("<span style=\"%s\">%d</span>", color, dizaine % 10);
+                } else {
+                    printf("<span style=\"color: red\">▒</span>");
+                }
+            }
+//
+
+
+                /*
+                //Ecrit pour terminal Linux 
                 if(dizaine%7 == 1){ 
                     printf("\033[0;31m");
                     printf("%d",(laby[j][i])%10);
@@ -49,6 +70,7 @@ int afficheLabyrinthe( int laby[TAILLE_X][TAILLE_Y], int depart[2], int arrivee[
                 printf("▒");
                 printf("\033[0m");
             }
+            */
         }
     }
     printf("\n");

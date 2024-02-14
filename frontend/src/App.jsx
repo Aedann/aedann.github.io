@@ -5,6 +5,7 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  console.log('%c hello world ', 'background: #222; color: #bada55');
 
   return (
     <>

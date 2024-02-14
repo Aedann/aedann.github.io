@@ -12,7 +12,8 @@ EXEC = laby.out
 
 # Commande pour compiler en WebAssembly
 EMCC = emcc
-EMCCFLAGS = -Wall -s NO_EXIT_RUNTIME=0
+PRELOAD = ./laby2.txt
+EMCCFLAGS = -Wall -s NO_EXIT_RUNTIME=0 --preload-file ${PRELOAD}
 EMCCLIBS =
 EMCCIDIR = 
 WEBSRC = $(SRC)
@@ -24,15 +25,15 @@ CXX_SUFFIX := c
 
 INCLUDE_DIR := ./
 SRC_DIR := ./
-BUILD_DIR := ./WASM
+BUILD_DIR := ./WASM/
 
 SRC := $(wildcard $(SRC_DIR)/*.$(CXX_SUFFIX))
 
 
 # Cible par défaut
-#all: cli wasm
+all: cli wasm
 
-all: html js
+#all: html js
 
 html:
 	mkdir -p $(BUILD_DIR)/html
@@ -61,7 +62,7 @@ $(WEBEXEC): $(WEBSRC)
 
 # Règles de nettoyage
 clean:
-	rm -rf $(BUILD_DIR)
+	rm -rf $(BUILD_DIR)/*
 
 .PHONY: all cli wasm clean
 

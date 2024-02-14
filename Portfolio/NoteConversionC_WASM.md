@@ -48,4 +48,7 @@
 	```
  * Rajouter un `printf("\n");` au début de main(void)
 
-Regarder pour le file load avec [hello_world_file.cpp](https://github.com/emscripten-core/emscripten/blob/main/test/hello_world_file.cpp)
+
+ * Utiliser le flag --preload-file ./laby2.txt
+
+
