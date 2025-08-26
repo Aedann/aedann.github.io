@@ -13,7 +13,7 @@ EXEC = laby.out
 # Commande pour compiler en WebAssembly
 EMCC = emcc
 PRELOAD = ./laby2.txt
-EMCCFLAGS = -Wall -s NO_EXIT_RUNTIME=0 --preload-file ${PRELOAD}
+EMCCFLAGS = -Wall -s NO_EXIT_RUNTIME=0 --preload-file ${PRELOAD} -sMODULARIZE -sEXPORT_ES6=1
 EMCCLIBS =
 EMCCIDIR = 
 WEBSRC = $(SRC)
@@ -58,7 +58,7 @@ $(EXEC): $(OBJ)
 
 # Règles de compilation pour WebAssembly
 $(WEBEXEC): $(WEBSRC)
-	$(EMCC) -o $@ $^ $(EMCCLIBS) $(EMCCIDIR)
+	$(EMCC) $(EMCCFLAGS) $^ -o $@ $(EMCCLIBS) $(EMCCIDIR)
 
 # Règles de nettoyage
 clean:

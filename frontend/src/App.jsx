@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import WASM_Canva from './Components/WASM_Canva/WASM_Canva'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,6 +10,7 @@ function App() {
 
   return (
     <>
+    <h1>Coucou Lucie 👋 </h1>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -18,6 +20,7 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <WASM_Canva inputFilePath="/laby.js" projectName="Labyrinthe Solver"/>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
