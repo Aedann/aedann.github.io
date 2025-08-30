@@ -1,0 +1,79 @@
+.parcours-thumbnail {
+  position: relative;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--text);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  font-family: var(--font-family);
+  overflow: hidden;
+  height: calc(var(--duration-months) * 1.5rem);
+}
+
+.parcours-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.parcours-header .logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.titre {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.etablissement {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.parcours-dates {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin: 0.5rem 0;
+}
+
+.description {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.parcours-background-icon {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  opacity: 0.08;
+  pointer-events: none;
+  width: 60px;
+  height: 60px;
+}
+
+/* .parcours-thumbnail {
+  position: relative;
+  padding: 1rem 1.25rem;
+  border-left: 1px solid var(--text);
+  border-right: 1px solid var(--text);
+  border-top: none;
+  border-bottom: none;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text);
+  font-family: var(--font-family);
+  overflow: hidden;
+  box-shadow:
+    inset 6px 0 6px -6px rgba(0, 0, 0, 0.2),
+    inset -6px 0 6px -6px rgba(0, 0, 0, 0.2);
+} */
+
+.parcours-background-icon img {
+  width: 100%;
+  height: 100%;
+}

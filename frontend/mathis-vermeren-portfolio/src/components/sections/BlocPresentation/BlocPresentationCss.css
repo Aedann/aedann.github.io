@@ -1,0 +1,44 @@
+.bloc-presentation {
+  background: transparent;
+  color: var(--text);
+  position: relative;
+  right: 30%;
+  margin-top: 2%;
+  z-index: -3;
+}
+
+.portrait {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  mask-image: radial-gradient(ellipse at center, white 50%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at center, white 50%, transparent 65%);
+}
+
+.name {
+  color: var(--accent);
+}
+
+.btn-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 9999px;
+  background: var(--button-bg, var(--card));
+  color: var(--button-text, var(--text));
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+.btn-social img {
+  width: 24px;
+  height: 24px;
+}
+.btn-social:hover {
+  transform: translateY(-2px);
+  background: var(--accent);
+  color: white;
+}

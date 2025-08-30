@@ -1,0 +1,127 @@
+/* themes.css */
+/* enr */
+:root {
+  --enr-bg: linear-gradient(to bottom, #2d6a4f, #a98467);
+  --enr-text: #3b2f2f;
+  --enr-card: #f0ebe3;
+  --enr-accent: #023e8a;
+  --enr-tab-bg: linear-gradient(135deg, #2d6a4f, #a98467);
+  --enr-tab-text: #3b2f2f;
+  --enr-chip-bg: #3b82f6;
+  --enr-font-family: Georgia, "Times New Roman", serif;
+
+  /* info */
+  --info-bg: rgb(5, 5, 5);
+  --info-text: rgb(22, 254, 3);
+  --info-card: rgb(5, 5, 5);
+  --info-accent: rgb(22, 254, 3);
+  --info-tab-bg: rgb(5, 5, 5);
+  --info-tab-text: rgb(22, 254, 3);
+  --info-font-family: "Courier New", Courier, monospace;
+
+  /* elec */
+  --elec-bg: linear-gradient(to bottom, #001845, #2a9d8f);
+  --elec-text: #f5f5f5;
+  --elec-card: #0b2259;
+  --elec-accent: #daa520;
+  --elec-tab-bg: linear-gradient(135deg, #001845, #2a9d8f);
+  --elec-tab-text: #daa520;
+
+  /* web */
+  --web-bg: #121212;
+  --web-text: #f8f9fa;
+  --web-card: #18181b;
+  --web-accent: linear-gradient(to right, #a855f7, #3b82f6);
+  --web-tab-bg: #121212;
+  --web-tab-text-gradient: linear-gradient(to right, #a227b3, #3b82f6);
+}
+
+/* autres (fallback/neutre) */
+:root {
+  --autres-bg: #e5e5e5;
+  --autres-card: #ffffff;
+  --autres-text: #000;
+  --autres-tab-bg: #e5e5e5;
+  --autres-tab-text: #000;
+  --autres-chip-bg: #3b82f6;
+}
+
+/* _______________________________________________________________________
+
+
+
+
+__________________________________________________________________________
+*/
+
+/* Parsing de variables */
+
+/* Autres (fallback/neutre) */
+:root[data-theme="autres"] {
+  --bg: var(--autres-bg);
+  --text: var(--autres-text);
+  --card: var(--autres-card);
+  --accent: var(--autres-accent);
+  --button-bg: var(--autres-button-bg);
+  --button-text: var(--autres-button-text);
+  --tab-text: var(--autres-tab-text);
+  --tab-bg: var(--autres-tab-bg);
+  --chip-bg: var(--autres-chip-bg);
+  --font-family: var(--autres-font-family);
+}
+
+:root[data-theme="enr"] {
+  --bg: var(--enr-bg);
+  --text: var(--enr-text);
+  --card: var(--enr-card);
+  --accent: var(--enr-accent);
+  --button-bg: var(--enr-button-bg);
+  --button-text: var(--enr-button-text);
+  --tab-text: var(--enr-tab-text);
+  --tab-bg: var(--enr-tab-bg);
+  --chip-bg: var(--enr-chip-bg);
+  --font-family: var(--enr-font-family);
+}
+
+/* [...] 3 fois la même chose pour elec, info et web */
+
+:root[data-theme="elec"] {
+  --bg: var(--elec-bg);
+  --text: var(--elec-text);
+  --card: var(--elec-card);
+  --accent: var(--elec-accent);
+  --button-bg: var(--elec-button-bg);
+  --button-text: var(--elec-button-text);
+  --tab-text: var(--elec-tab-text);
+  --tab-bg: var(--elec-tab-bg);
+  --chip-bg: var(--elec-chip-bg);
+  --font-family: var(--elec-font-family);
+}
+
+:root[data-theme="info"] {
+  --bg: var(--info-bg);
+  --text: var(--info-text);
+  --card: var(--info-card);
+  --accent: var(--info-accent);
+  --button-bg: var(--info-button-bg);
+  --button-text: var(--info-button-text);
+  --tab-text: var(--info-tab-text);
+  --tab-bg: var(--info-tab-bg);
+  --chip-bg: var(--info-chip-bg);
+  --font-family: var(--info-font-family);
+}
+
+/* Pour replace : */
+
+:root[data-theme="foobar"] {
+  --bg: var(--foobar-bg);
+  --text: var(--foobar-text);
+  --card: var(--foobar-card);
+  --accent: var(--foobar-accent);
+  --button-bg: var(--foobar-button-bg);
+  --button-text: var(--foobar-button-text);
+  --tab-text: var(--foobar-tab-text);
+  --tab-bg: var(--foobar-tab-bg);
+  --chip-bg: var(--foobar-chip-bg);
+  --font-family: var(--foobar-font-family);
+}

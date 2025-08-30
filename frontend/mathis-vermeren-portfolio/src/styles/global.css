@@ -1,0 +1,64 @@
+/* global.css */
+@import "tailwindcss";
+
+:root {
+  --bg: #e5e5e5;
+  --text: #000;
+  --card: #ffffff;
+  --muted: #9ca3af;
+  --clay-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  --radius: 1rem;
+  --accent: #3b82f6;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  font-family: var(--font-family, sans-serif);
+}
+
+body {
+  @apply antialiased;
+  background: var(--bg);
+  color: var(--text);
+}
+
+h1 {
+  @apply text-4xl font-bold text-center mb-6;
+}
+
+.tab-label {
+  @apply text-2xl font-bold text-center mb-6;
+}
+
+h2 {
+  @apply text-2xl mb-2;
+}
+
+h3 {
+  @apply text-xl italic mb-2;
+}
+
+p {
+  @apply leading-relaxed;
+}
+
+.clay {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--clay-shadow);
+}
+
+.badge {
+  @apply inline-flex items-center gap-1 px-2 py-1 text-sm rounded-full;
+  background: color-mix(in oklab, var(--card), white 6%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

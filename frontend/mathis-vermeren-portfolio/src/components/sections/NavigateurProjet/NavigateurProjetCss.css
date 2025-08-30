@@ -1,0 +1,49 @@
+.navigateur-projet {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.filtres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filtre-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  background: var(--card);
+  color: var(--text);
+  font-size: 0.9rem;
+  box-shadow:
+    4px 4px 8px #0002,
+    -4px -4px 8px #fff1;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+.filtre-btn:hover {
+  transform: translateY(-2px);
+  background: var(--accent);
+  color: white;
+}
+.filtre-btn.active {
+  background: var(--accent);
+  color: white;
+  font-weight: bold;
+}
+
+.projets-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.empty {
+  text-align: center;
+  opacity: 0.7;
+  font-style: italic;
+}

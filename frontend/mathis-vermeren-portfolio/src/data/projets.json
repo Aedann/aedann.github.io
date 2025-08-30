@@ -1,0 +1,22 @@
+[
+  {
+    "titre": "Ruche connectée (edge AI)",
+    "categorie": "elec",
+    "topics": ["C", "RTOS", "FPGA"],
+    "description": "Capteurs + inférence en bordure.",
+    "readme": "/data/readmes/ruche.md",
+    "wasm": true,
+    "lien": "https://www.google.fr",
+    "github": "https://github.com/Aedann/ruche"
+  },
+  {
+    "titre": "Dashboard PV",
+    "categorie": "enr",
+    "topics": ["Python", "D3.js"],
+    "description": "Visualisation production solaire.",
+    "readme": "/data/readmes/pv.md",
+    "wasm": false,
+    "lien": "",
+    "github": "https://github.com/Aedann/pv-dashboard"
+  }
+]

@@ -1,0 +1,93 @@
+[
+  {
+    "type": "formation",
+    "titre": "Baccalauréat Scientifique",
+    "etablissement": "Lycée Victor Hugo",
+    "logoName": "URL_LOGOName_A_COMPLETER",
+    "lieu": "Caen, France",
+    "date_debut": "2016-09",
+    "date_fin": "2019-06",
+    "description": "Mention Très Bien, Section Européenne Anglais."
+  },
+  {
+    "type": "formation",
+    "titre": "Classe Préparatoire aux Grandes Écoles (CPGE)",
+    "etablissement": "Lycée Dumont d'Urville",
+    "logoName": "Dumont",
+    "lieu": "Caen, France",
+    "date_debut": "2019-09",
+    "date_fin": "2021-09",
+    "description": "Filière PTSI/PT - Physique Technologie."
+  },
+  {
+    "type": "formation",
+    "titre": "Faculté de Physique et Concours en Candidat Libre",
+    "etablissement": "Université de Paris (Paris Descartes)",
+    "logoName": "ParisCite",
+    "lieu": "Paris, France",
+    "date_debut": "2021-09",
+    "date_fin": "2022-04",
+    "description": "Concours Banque PT passés en parallèle de la licence de Physique."
+  },
+  {
+    "type": "travail",
+    "titre": "WWOOFING",
+    "etablissement": "Cortijo en permaculture",
+    "logoName": "URL_LOGOName_A_COMPLETER",
+    "lieu": "Lanjarón, Andalusia, Spain",
+    "date_debut": "2022-08",
+    "date_fin": "2022-08",
+    "description": null
+  },
+  {
+    "type": "formation",
+    "titre": "Ingénieur : Informatique Électronique, Systèmes Embarqués",
+    "etablissement": "Polytech Sorbonne",
+    "logoName": "Sorbonne",
+    "lieu": "Paris 5e, France",
+    "date_debut": "2022-09",
+    "date_fin": "2025-06",
+    "description": null
+  },
+  {
+    "type": "benevolat",
+    "titre": "Bénévolat en plantation d'arbres",
+    "etablissement": "TEP Ménilmontant",
+    "logoName": "URL_LOGOName_A_COMPLETER",
+    "lieu": "Paris, France",
+    "date_debut": "2022-09",
+    "date_fin": "2023-06",
+    "description": null
+  },
+  {
+    "type": "travail",
+    "titre": "Pré-Étude d'un méthaniseur urbain",
+    "etablissement": "Centrales Nantes",
+    "logoName": "URL_LOGOName_A_COMPLETER",
+    "lieu": "Nantes, France",
+    "date_debut": "2022-12",
+    "date_fin": "2022-12",
+    "description": null
+  },
+  {
+    "type": "travail",
+    "titre": "Ouvrier Intérimaire : Production et Manutention",
+    "etablissement": "Temporis Caen",
+    "logoName": "URL_LOGOName_A_COMPLETER",
+    "lieu": "Caen, France",
+    "date_debut": "2023-07",
+    "date_fin": "2024-09",
+    "description": "Ripeur, Préparateur de commandes, Ouvrier de production, Manutentionnaire, Déménageur, Réception de container."
+  },
+  {
+    "type": "formation",
+    "titre": "Erasmus - Sustainable System Engineering",
+    "categorie": "EnR",
+    "etablissement": "Albert Ludwigs Universität Freiburg",
+    "logoName": "Freiburg",
+    "lieu": "Freiburg im Breisgau, Germany",
+    "date_debut": "2024-10",
+    "date_fin": "2025-06",
+    "description": null
+  }
+]

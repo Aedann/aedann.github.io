@@ -1,0 +1,124 @@
+.categ-tab {
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+  position: relative;
+}
+
+.categ-tab:not(.first-tab):not(.last-tab) {
+  clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
+}
+
+.first-tab {
+  clip-path: polygon(0 0, 95% 0, 100% 100%, 0 100%);
+}
+
+.last-tab {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
+}
+
+.categ-tab:not(.first-tab) {
+  margin-left: -1%;
+}
+
+.categ-tab:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.tab-label {
+  color: var(--tab-text);
+  margin-left: 35%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.categ-enr {
+  background: var(--enr-tab-bg);
+  --tab-text: var(--enr-tab-text);
+}
+
+.categ-info {
+  background: var(--info-tab-bg);
+  --tab-text: var(--info-tab-text);
+}
+
+.categ-elec {
+  background: var(--elec-tab-bg);
+  --tab-text: var(--elec-tab-text);
+}
+
+.categ-web {
+  background: var(--web-tab-bg);
+}
+
+.tab-label {
+  font-family: "Verdana";
+}
+
+.categ-web .tab-label {
+  background-image: var(--web-tab-text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.categ-info .tab-label {
+  font-family: var(--info-font-family);
+  font-weight: bolder;
+}
+
+.categ-autres {
+  background: var(--autres-tab-bg);
+  --tab-text: var(--autres-tab-text);
+}
+
+.categ-tab::before {
+  content: "";
+  position: absolute;
+  margin-right: 50%;
+  inset: 0;
+  background: rgb(0, 0, 0);
+  opacity: 0.35;
+  mix-blend-mode: darken;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.categ-tab > * {
+  position: relative;
+  z-index: 1;
+}
+
+.categ-enr::before {
+  mask: url("../../../assets/svg/sun.svg") center/11.5vh auto no-repeat;
+  -webkit-mask: url("../../../assets/svg/sun.svg") center/11.5vh auto no-repeat;
+}
+
+.categ-info::before {
+  mask: url("../../../assets/svg/keyboard.svg") center/11.5vh auto no-repeat;
+  -webkit-mask: url("../../../assets/svg/keyboard.svg") center/11.5vh auto no-repeat;
+  background: var(--info-tab-text);
+  opacity: 0.35;
+  mix-blend-mode: lighten;
+}
+
+.categ-elec::before {
+  mask: url("../../../assets/svg/circuit.svg") center/11.5vh auto no-repeat;
+  -webkit-mask: url("../../../assets/svg/circuit.svg") center/11.5vh auto no-repeat;
+}
+
+.categ-web::before {
+  mask: url("../../../assets/svg/globe.svg") center/11.5vh auto no-repeat;
+  -webkit-mask: url("../../../assets/svg/globe.svg") center/11.5vh auto no-repeat;
+  background: var(--web-tab-text-gradient);
+  opacity: 0.35;
+  mix-blend-mode: lighten;
+}
+
+.categ-autres::before {
+  mask: url("../../../assets/svg/layers.svg") center/11.5vh auto no-repeat;
+  -webkit-mask: url("../../../assets/svg/layers.svg") center/11.5vh auto no-repeat;
+}

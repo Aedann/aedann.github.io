@@ -1,0 +1,71 @@
+.thumbnail {
+  border-radius: 1rem;
+  padding: 1rem;
+  background: var(--card);
+  box-shadow:
+    8px 8px 16px #0002,
+    -8px -8px 16px #fff1;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  cursor: pointer;
+}
+.thumbnail:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    12px 12px 24px #0003,
+    -12px -12px 24px #fff2;
+}
+
+.thumbnail-enr {
+  background: var(--card-enr);
+}
+.thumbnail-informatique {
+  background: var(--card-info);
+}
+.thumbnail-electronique {
+  background: var(--card-elec);
+}
+.thumbnail-web {
+  background: var(--card-web);
+}
+
+.topic {
+  display: inline-block;
+  margin: 0.2rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 9999px;
+  background: var(--chip-bg, #ddd);
+  font-size: 0.8rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+  background: var(--accent);
+  color: white;
+  transition: background 0.2s;
+}
+.btn:hover {
+  background: var(--accent-hover, #444);
+}
+
+.popup {
+  position: fixed;
+  inset: 0;
+  background: #0008;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup-content {
+  background: var(--card);
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
