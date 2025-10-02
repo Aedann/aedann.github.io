@@ -1,0 +1,3 @@
+[submodule "Portfolio/emsdk"]
+    path = Portfolio/emsdk
+    url = https://github.com/emscripten-core/emsdk.git
