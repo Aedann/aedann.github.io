@@ -39,7 +39,7 @@ export default function App() {
           <LangSwitcher />
           <Sommaire />
           <section id="presentation">
-            <BlocPresentation />
+            <BlocPresentation categorieActive={theme} />
           </section>
           <div className="bloc-parcours-projets">
             <section id="projets">

@@ -6,15 +6,15 @@ import circuitIcon from "../../../assets/svg/circuit.svg";
 import globeIcon from "../../../assets/svg/globe.svg";
 import layersIcon from "../../../assets/svg/layers.svg";
 import "./BarreCategCss.css";
-import { t } from "@lingui/core/macro";
+import { Trans } from "@lingui/react/macro";
 
 export default function BarreCateg() {
   const categories = [
-    { key: "enr", label: t`Energies Renouvelables`, icon: sunIcon },
-    { key: "info", label: t`Informatique`, icon: keyboardIcon },
-    { key: "elec", label: t`Électronique`, icon: circuitIcon },
-    { key: "web", label: t`Web`, icon: globeIcon },
-    { key: "autres", label: t`Autres`, icon: layersIcon },
+    { key: "enr", label: <Trans>Energies Renouvelables</Trans>, icon: sunIcon },
+    { key: "info", label: <Trans>Informatique</Trans>, icon: keyboardIcon },
+    { key: "elec", label: <Trans>Électronique</Trans>, icon: circuitIcon },
+    { key: "web", label: <Trans>Web</Trans>, icon: globeIcon },
+    { key: "autres", label: <Trans>Autres</Trans>, icon: layersIcon },
   ];
   const location = useLocation();
   const navigate = useNavigate();

@@ -5,7 +5,11 @@ import Linkedin from "../../../assets/svg/linkedin.svg";
 import Mail from "../../../assets/svg/mail.svg";
 import { Trans } from "@lingui/react/macro";
 
-export default function BlocPresentation() {
+interface Props {
+  categorieActive?: Categories;
+}
+
+export default function BlocPresentation({ categorieActive }: Props) {
   return (
     <section className="bloc-presentation flex items-center gap-6 p-6">
       <img src={Portrait} alt="Portrait" className="portrait" />
@@ -14,10 +18,38 @@ export default function BlocPresentation() {
         <h2 className="name text-2xl font-bold">Mathis Vermeren</h2>
         <p className="age text-base opacity-80">23 ans</p>
         <p className="intro max-w-lg">
-          <Trans>
-            Petit texte introductif, qui dépend du thème choisi et s’adapte à la couleur globale.
-            RAJOUTER OPENCLASSROOM DANS WEB.
-          </Trans>
+          {categorieActive === "elec" && (
+            <Trans>
+              Petit texte introductif, qui dépend du thème choisi et s’adapte à la couleur globale.
+              RAJOUTER OPENCLASSROOM DANS WEB.
+            </Trans>
+          )}
+          {categorieActive === "info" && (
+            <Trans>
+              Étudiant en informatique et passionné par le développement web, j'aime créer des
+              applications innovantes et fonctionnelles. Je suis toujours à la recherche de nouveaux
+              défis pour améliorer mes compétences et contribuer à des projets passionnants.
+            </Trans>
+          )}
+          {categorieActive === "enr" && (
+            <Trans>
+              Passionné par les énergies renouvelables, je m'engage à créer un avenir durable grâce
+              à des solutions innovantes et respectueuses de l'environnement.
+            </Trans>
+          )}
+          {categorieActive === "web" && (
+            <Trans>
+              Étudiant en informatique et passionné par le développement web, j'aime créer des
+              applications innovantes et fonctionnelles. Je suis toujours à la recherche de nouveaux
+              défis pour améliorer mes compétences et contribuer à des projets passionnants.
+            </Trans>
+          )}
+          {categorieActive === "autres" && (
+            <Trans>
+              Je suis également intéressé par d'autres domaines et je suis toujours prêt à explorer
+              de nouvelles opportunités.
+            </Trans>
+          )}
         </p>
 
         <div className="flex gap-3 mt-2">

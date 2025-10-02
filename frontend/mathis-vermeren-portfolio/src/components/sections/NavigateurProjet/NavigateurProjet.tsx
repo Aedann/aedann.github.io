@@ -6,7 +6,7 @@ import type { Projet } from "../../layout/ProjetThumbnail/ProjetThumbnail";
 
 interface Props {
   projets: Projet[];
-  categorieActive?: "elec" | "info" | "enr" | "web" | "autres";
+  categorieActive?: Categories;
 }
 
 export default function NavigateurProjet({ projets, categorieActive }: Props) {

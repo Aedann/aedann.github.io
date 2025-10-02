@@ -13,14 +13,59 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/components/sections/NavigateurProjet/NavigateurProjet.tsx:31
+msgid "Énergies Renouvelables"
+msgstr ""
+
+#: src/components/sections/BlocPresentation/BlocPresentation.tsx:22
+msgid "Petit texte introductif, qui dépend du thème choisi et s’adapte à la couleur globale. RAJOUTER OPENCLASSROOM DANS WEB."
+msgstr ""
+
 #: src/components/sections/BlocPresentation/BlocPresentation.tsx:17
-msgid "Petit texte introductif, qui dépend du thème choisi et s’adapte à la couleur globale."
-msgstr "Small Introductive text"
+#~ msgid "Petit texte introductif, qui dépend du thème choisi et s’adapte à la couleur globale."
+#~ msgstr "Small Introductive text"
 
 #: src/components/sections/BlocPresentation/BlocPresentation.tsx:15
 #~ msgid "years old"
 #~ msgstr ""
 
+#: src/components/layout/BarreCateg/BarreCateg.tsx:15
+#: src/components/sections/NavigateurProjet/NavigateurProjet.tsx:29
+msgid "Électronique"
+msgstr "Electronics"
+
 #: src/components/sections/BlocPresentation/BlocPresentation.tsx:17
 #~ msgid "Small Introductive text"
 #~ msgstr ""
+
+#: src/components/sections/BlocPresentation/BlocPresentation.tsx:48
+msgid "Je suis également intéressé par d'autres domaines et je suis toujours prêt à explorer de nouvelles opportunités."
+msgstr "I am also interested in other fields and always ready to explore new opportunities."
+
+#: src/components/layout/BarreCateg/BarreCateg.tsx:14
+#: src/components/sections/NavigateurProjet/NavigateurProjet.tsx:30
+msgid "Informatique"
+msgstr "Computer Science"
+
+#: src/components/layout/BarreCateg/BarreCateg.tsx:16
+#: src/components/sections/NavigateurProjet/NavigateurProjet.tsx:32
+msgid "Web"
+msgstr "Web"
+
+#: src/components/sections/BlocPresentation/BlocPresentation.tsx:35
+msgid "Passionné par les énergies renouvelables, je m'engage à créer un avenir durable grâce à des solutions innovantes et respectueuses de l'environnement."
+msgstr "Passionate about renewable energies, I am committed to creating a sustainable future through innovative and environmentally friendly solutions."
+
+#: src/components/layout/BarreCateg/BarreCateg.tsx:13
+msgid "Energies Renouvelables"
+msgstr "Renewable Energies"
+
+#: src/components/layout/BarreCateg/BarreCateg.tsx:17
+#: src/components/sections/NavigateurProjet/NavigateurProjet.tsx:33
+msgid "Autres"
+msgstr "Others"
+
+#: src/components/sections/BlocPresentation/BlocPresentation.tsx:28
+#: src/components/sections/BlocPresentation/BlocPresentation.tsx:41
+msgid "Étudiant en informatique et passionné par le développement web, j'aime créer des applications innovantes et fonctionnelles. Je suis toujours à la recherche de nouveaux défis pour améliorer mes compétences et contribuer à des projets passionnants."
+msgstr "As a computer science student passionate about web development, I love creating innovative and functional applications. I am always looking for new challenges to improve my skills and contribute to exciting projects."
