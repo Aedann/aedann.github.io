@@ -7,8 +7,8 @@ import Dumont from "../../../assets/svg/Dumont.svg";
 import ParisCite from "../../../assets/svg/ParisCite.svg";
 import { useLingui } from "@lingui/react";
 
-interface Parcours {
-  type: "formation" | "travail";
+export interface Parcours {
+  type: "formation" | "travail" | "benevolat";
   titre: string;
   etablissement: string;
   logoName: string;
@@ -17,6 +17,8 @@ interface Parcours {
   date_fin: string;
   description: string;
   descriptionEN: string;
+  durationInMonths?: number;
+  side?: "left" | "right";
 }
 
 const logoMap: { [key: string]: string } = {

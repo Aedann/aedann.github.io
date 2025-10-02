@@ -1,18 +1,7 @@
 import ParcoursThumbnail from "../../layout/ParcoursThumbnail/ParcoursThumbnail";
 import "./ParcoursTimelineCss.css";
 import YearMarker2 from "../../../assets/svg/YearMarker3.svg";
-
-interface Parcours {
-  type: "formation" | "travail";
-  titre: string;
-  etablissement: string;
-  logoName: string;
-  lieu: string;
-  date_debut: string; // YYYY-MM
-  date_fin: string;
-  description: string | null;
-  side: "left" | "right";
-}
+import type { Parcours } from "../../layout/ParcoursThumbnail/ParcoursThumbnail";
 
 export default function ParcoursTimeline({ parcours }: { parcours: Parcours[] }) {
   const enriched = parcours.map((p) => {
@@ -24,8 +13,6 @@ export default function ParcoursTimeline({ parcours }: { parcours: Parcours[] })
     return { ...p, side, start, end, duration };
   });
 
-  let leftEnd = 0;
-  let rightEnd = 0;
   const baseDate = enriched[0]?.start ?? new Date();
 
   const placed = enriched.map((item) => {
@@ -51,9 +38,8 @@ export default function ParcoursTimeline({ parcours }: { parcours: Parcours[] })
 
     return { ...item, monthsFromStart };
   });
-
-  const firstYear = enriched[0].start.getFullYear();
-  const lastYear = enriched[enriched.length - 1].end.getFullYear();
+  const firstYear = enriched[0]?.start?.getFullYear() ?? 0;
+  const lastYear = enriched[enriched.length - 1]?.end?.getFullYear() ?? 0;
 
   const years = [];
   for (let y = firstYear + 1; y <= lastYear; y++) {

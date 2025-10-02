@@ -1,4 +1,1 @@
-/*eslint-disable*/ import type { Messages } from "@lingui/core";
-export const messages = JSON.parse(
-  '{"6fI2E+":["Small Introductive text"],"9K9GTQ":["ans"],"Dj0nYr":["years old"],"Q7knwC":["Small Introductive text"]}',
-) as Messages;
+/*eslint-disable*/import type{Messages}from"@lingui/core";export const messages=JSON.parse("{\"6fI2E+\":[\"Small Introductive text\"],\"9K9GTQ\":[\"ans\"],\"Dj0nYr\":[\"years old\"],\"Q7knwC\":[\"Small Introductive text\"]}")as Messages;

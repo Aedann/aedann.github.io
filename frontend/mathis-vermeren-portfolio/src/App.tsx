@@ -4,6 +4,7 @@ import BarreCateg from "./components/layout/BarreCateg/BarreCateg";
 import BlocPresentation from "./components/sections/BlocPresentation/BlocPresentation";
 import NavigateurProjet from "./components/sections/NavigateurProjet/NavigateurProjet";
 import ParcoursTimeline from "./components/sections/ParcoursTimeline/ParcoursTimeline";
+import type { Parcours } from "./components/layout/ParcoursThumbnail/ParcoursThumbnail";
 import ContactBanner from "./components/sections/ContactBanner/ContactBanner";
 import Sommaire from "./components/layout/Sommaire/Sommaire";
 import projetsData from "./data/projets.json";
@@ -20,6 +21,7 @@ export default function App() {
   const tab = params.get("tab"); // ?tab=enr
   const theme = (tab ?? "web").toLowerCase();
 
+  const parcoursDataTyped: Parcours[] = parcoursData as Parcours[];
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
@@ -49,7 +51,7 @@ export default function App() {
               />
             </section>
             <section id="parcours">
-              <ParcoursTimeline parcours={parcoursData} />
+              <ParcoursTimeline parcours={parcoursDataTyped} />
             </section>
           </div>
           <ContactBanner />

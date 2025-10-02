@@ -2,17 +2,7 @@ import { useState } from "react";
 import ProjetThumbnail from "../../layout/ProjetThumbnail/ProjetThumbnail";
 import "./NavigateurProjetCss.css";
 import { t } from "@lingui/core/macro";
-
-interface Projet {
-  titre: string;
-  topics: string[];
-  description: string;
-  readme: string;
-  categorie: "elec" | "info" | "enr" | "web" | "autres";
-  wasm: boolean;
-  lien?: string;
-  github?: string;
-}
+import type { Projet } from "../../layout/ProjetThumbnail/ProjetThumbnail";
 
 interface Props {
   projets: Projet[];

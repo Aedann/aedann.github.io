@@ -6,14 +6,14 @@ import Github from "../../../assets/svg/github.svg";
 import ExternalLink from "../../../assets/svg/external-link.svg";
 import { useLingui } from "@lingui/react";
 
-interface Projet {
+export interface Projet {
   titre: string;
   topics: string[];
   description: string;
-  descriptionEN: string;
+  descriptionEN?: string;
   readme: string;
   categorie: "elec" | "info" | "enr" | "web" | "autres";
-  wasm: boolean;
+  wasm?: boolean;
   lien?: string;
   github?: string;
 }
