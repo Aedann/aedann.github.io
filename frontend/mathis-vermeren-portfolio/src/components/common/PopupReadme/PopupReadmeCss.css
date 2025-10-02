@@ -1,0 +1,97 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+.popup-content {
+  background: var(--card, #fff);
+  color: var(--text, #000);
+  border-radius: 12px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.popup-title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.popup-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text, #000);
+  transition: transform 0.2s ease;
+}
+.popup-close:hover {
+  transform: scale(1.2);
+}
+
+.popup-content img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.popup-content pre {
+  background: #1e1e1e;
+  color: #f8f8f2;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.popup-content code {
+  font-family: monospace;
+  font-size: 0.95rem;
+}
+
+.mermaid {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.popup-content h1,
+.popup-content h2,
+.popup-content h3,
+.popup-content h4,
+.popup-content h5,
+.popup-content h6 {
+  text-align: left;
+}
+
+.popup-content h1,
+.popup-content h2,
+.popup-content h3 {
+  border-bottom: 1px solid #e1e4e8;
+  padding-bottom: 0.3em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+.popup-content ul {
+  list-style: disc;
+  padding-left: 2em;
+}
+
+.popup-content a {
+  color: #0366d6;
+  text-decoration: underline;
+}

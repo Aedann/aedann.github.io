@@ -6,28 +6,28 @@ import circuitIcon from "../../../assets/svg/circuit.svg";
 import globeIcon from "../../../assets/svg/globe.svg";
 import layersIcon from "../../../assets/svg/layers.svg";
 import "./BarreCategCss.css";
-
-const categories = [
-  { key: "enr", label: "Energies Renouvelables", icon: sunIcon },
-  { key: "info", label: "Informatique", icon: keyboardIcon },
-  { key: "elec", label: "Électronique", icon: circuitIcon },
-  { key: "web", label: "Web", icon: globeIcon },
-  { key: "autres", label: "Autres", icon: layersIcon },
-];
+import { t } from "@lingui/core/macro";
 
 export default function BarreCateg() {
+  const categories = [
+    { key: "enr", label: t`Energies Renouvelables`, icon: sunIcon },
+    { key: "info", label: t`Informatique`, icon: keyboardIcon },
+    { key: "elec", label: t`Électronique`, icon: circuitIcon },
+    { key: "web", label: t`Web`, icon: globeIcon },
+    { key: "autres", label: t`Autres`, icon: layersIcon },
+  ];
   const location = useLocation();
   const navigate = useNavigate();
 
   const params = new URLSearchParams(location.search);
-  const active = params.get("section") || "autres";
+  const active = params.get("tab") || "autres";
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", active);
   }, [active]);
 
   const handleClick = (key: string) => {
-    navigate(`/?section=${key}`);
+    navigate(`/?tab=${key}`);
   };
 
   const orderedCats = [
@@ -35,20 +35,18 @@ export default function BarreCateg() {
     ...categories.filter((c) => c.key !== active),
   ];
   return (
-    <div className="absolute top-0 left-0 w-full">
-      <nav className="h-[10vh] w-full flex items-stretch shadow-md overflow-hidden">
-        {orderedCats.map(({ key, label }, index) => (
-          <button
-            key={key}
-            onClick={() => handleClick(key)}
-            className={`categ-tab categ-${key} ${active === key ? "active" : ""} flex-1 flex items-center justify-center gap-2 
+    <nav className="barre-categ">
+      {orderedCats.map(({ key, label }, index) => (
+        <button
+          key={key}
+          onClick={() => handleClick(key)}
+          className={`categ-tab categ-${key} ${active === key ? "active" : ""} flex-1 flex items-center justify-center  
         ${index === 0 ? "first-tab" : ""} 
         ${index === orderedCats.length - 1 ? "last-tab" : ""}`}
-          >
-            <span className="tab-label">{label}</span>
-          </button>
-        ))}
-      </nav>
-    </div>
+        >
+          <span className="tab-label">{label}</span>
+        </button>
+      ))}
+    </nav>
   );
 }

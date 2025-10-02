@@ -1,22 +1,17 @@
 .navigateur-projet {
-  display: flex;
-  flex-direction: column;
   gap: 1.5rem;
 }
 
 .filtres {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  z-index: 5;
 }
 
 .filtre-btn {
-  padding: 0.5rem 1rem;
   border-radius: 9999px;
   border: none;
   cursor: pointer;
-  background: var(--card);
-  color: var(--text);
+  background: var(--tag-text);
+  color: var(--tag-bg);
   font-size: 0.9rem;
   box-shadow:
     4px 4px 8px #0002,
@@ -31,15 +26,13 @@
   color: white;
 }
 .filtre-btn.active {
-  background: var(--accent);
-  color: white;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+
   font-weight: bold;
 }
 
 .projets-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 
 .empty {

@@ -7,7 +7,8 @@
     "lieu": "Caen, France",
     "date_debut": "2016-09",
     "date_fin": "2019-06",
-    "description": "Mention Très Bien, Section Européenne Anglais."
+    "description": "Mention Très Bien, Section Européenne Anglais.",
+    "side": "left"
   },
   {
     "type": "formation",
@@ -17,17 +18,30 @@
     "lieu": "Caen, France",
     "date_debut": "2019-09",
     "date_fin": "2021-09",
-    "description": "Filière PTSI/PT - Physique Technologie."
+    "description": "Filière PTSI/PT - Physique Technologie.",
+    "side": "right"
   },
   {
     "type": "formation",
-    "titre": "Faculté de Physique et Concours en Candidat Libre",
+    "titre": "Faculté de Physique ",
     "etablissement": "Université de Paris (Paris Descartes)",
     "logoName": "ParisCite",
     "lieu": "Paris, France",
     "date_debut": "2021-09",
     "date_fin": "2022-04",
-    "description": "Concours Banque PT passés en parallèle de la licence de Physique."
+    "description": "",
+    "side": "left"
+  },
+  {
+    "type": "formation",
+    "titre": "Concours Banque PT en Candidat Libre",
+    "etablissement": "",
+    "logoName": "URL_LOGOName_A_COMPLETER",
+    "lieu": "",
+    "date_debut": "2021-10",
+    "date_fin": "2022-07",
+    "description": "",
+    "side": "right"
   },
   {
     "type": "travail",
@@ -35,9 +49,10 @@
     "etablissement": "Cortijo en permaculture",
     "logoName": "URL_LOGOName_A_COMPLETER",
     "lieu": "Lanjarón, Andalusia, Spain",
-    "date_debut": "2022-08",
-    "date_fin": "2022-08",
-    "description": null
+    "date_debut": "2022-06",
+    "date_fin": "2022-07",
+    "description": null,
+    "side": "left"
   },
   {
     "type": "formation",
@@ -47,7 +62,8 @@
     "lieu": "Paris 5e, France",
     "date_debut": "2022-09",
     "date_fin": "2025-06",
-    "description": null
+    "description": null,
+    "side": "left"
   },
   {
     "type": "benevolat",
@@ -57,7 +73,8 @@
     "lieu": "Paris, France",
     "date_debut": "2022-09",
     "date_fin": "2023-06",
-    "description": null
+    "description": null,
+    "side": "right"
   },
   {
     "type": "travail",
@@ -67,7 +84,8 @@
     "lieu": "Nantes, France",
     "date_debut": "2022-12",
     "date_fin": "2022-12",
-    "description": null
+    "description": null,
+    "side": "left"
   },
   {
     "type": "travail",
@@ -77,7 +95,9 @@
     "lieu": "Caen, France",
     "date_debut": "2023-07",
     "date_fin": "2024-09",
-    "description": "Ripeur, Préparateur de commandes, Ouvrier de production, Manutentionnaire, Déménageur, Réception de container."
+    "description": "Ripeur, Préparateur de commandes, Ouvrier de production, Manutentionnaire, Déménageur, Réception de container.",
+    "descriptionEN": "Garbage collector, Order picker, Production worker, Warehouse worker, Mover, Container receptionist.",
+    "side": "right"
   },
   {
     "type": "formation",
@@ -88,6 +108,7 @@
     "lieu": "Freiburg im Breisgau, Germany",
     "date_debut": "2024-10",
     "date_fin": "2025-06",
-    "description": null
+    "description": null,
+    "side": "right"
   }
 ]

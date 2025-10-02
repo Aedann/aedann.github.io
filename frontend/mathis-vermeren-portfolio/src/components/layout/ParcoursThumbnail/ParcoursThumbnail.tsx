@@ -5,6 +5,7 @@ import Freiburg from "../../../assets/svg/Freiburg.svg";
 import Sorbonne from "../../../assets/svg/Sorbonne.svg";
 import Dumont from "../../../assets/svg/Dumont.svg";
 import ParisCite from "../../../assets/svg/ParisCite.svg";
+import { useLingui } from "@lingui/react";
 
 interface Parcours {
   type: "formation" | "travail";
@@ -15,6 +16,7 @@ interface Parcours {
   date_debut: string; // YYYY-MM
   date_fin: string;
   description: string;
+  descriptionEN: string;
 }
 
 const logoMap: { [key: string]: string } = {
@@ -25,6 +27,8 @@ const logoMap: { [key: string]: string } = {
 };
 
 export default function ParcoursThumbnail({ item }: { item: Parcours }) {
+  const { i18n } = useLingui();
+
   const icon = item.type === "formation" ? Student : Briefcase;
 
   const startDate = new Date(item.date_debut);
@@ -50,9 +54,11 @@ export default function ParcoursThumbnail({ item }: { item: Parcours }) {
       </div>
 
       <div className="parcours-header">
-        {logoSrc && <img src={logoSrc} alt={item.etablissement} className="logo" />}
         <div>
-          <h3 className="titre">{item.titre}</h3>
+          <div className="flex">
+            {logoSrc && <img src={logoSrc} alt={item.etablissement} className="logo" />}
+            <h3 className="titre">{item.titre}</h3>
+          </div>
           <p className="etablissement">
             {item.etablissement} – {item.lieu}
           </p>
@@ -63,7 +69,7 @@ export default function ParcoursThumbnail({ item }: { item: Parcours }) {
         {formatDate(item.date_debut)} → {formatDate(item.date_fin)}
       </div>
 
-      <p className="description">{item.description}</p>
+      <p className="description">{i18n.locale === "fr" ? item.description : item.descriptionEN}</p>
     </div>
   );
 }

@@ -1,0 +1,16 @@
+{
+  "jsc": {
+    "transform": {
+      "react": {
+        "runtime": "automatic"
+      }
+    },
+    "parser": {
+      "syntax": "typescript",
+      "tsx": true
+    },
+    "experimental": {
+      "plugins": [["@lingui/swc-plugin", {}]]
+    }
+  }
+}

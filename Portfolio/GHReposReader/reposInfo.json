@@ -1,0 +1,116 @@
+[
+  {
+    "titre": "CLIP_Midi",
+    "topics": [],
+    "languages": null,
+    "description": "CLIP (Contrastive Language-Image Pretraining) adapted for midi recognition",
+    "readme": "/data/readmes/clip_midi.md",
+    "lien": "",
+    "github": "https://github.com/Aedann/CLIP_Midi"
+  },
+  {
+    "titre": "Jeu-Du-Moulin-RiscV",
+    "topics": [
+      "assembly",
+      "c",
+      "risc-v"
+    ],
+    "languages": "Assembly",
+    "description": "Jeu du Moulin écrit en assembleur RiscV",
+    "readme": "/data/readmes/jeu-du-moulin-riscv.md",
+    "lien": "",
+    "github": "https://github.com/Aedann/Jeu-Du-Moulin-RiscV"
+  },
+  {
+    "titre": "MP3_To_Midi",
+    "topics": [
+      "c",
+      "python",
+      "signal-processing"
+    ],
+    "languages": "MATLAB",
+    "description": "Projet traitement du signal 2023 Polytech Sorbonne",
+    "readme": "/data/readmes/mp3_to_midi.md",
+    "lien": "",
+    "github": "https://github.com/Aedann/MP3_To_Midi"
+  },
+  {
+    "titre": "MurImage",
+    "topics": [
+      "expressjs",
+      "godot",
+      "nodejs",
+      "raspberry-pi",
+      "react"
+    ],
+    "languages": "GDScript",
+    "description": "A Display Wall made of 9 screens driven by Raspberry Pi and monitored by a web application.",
+    "readme": "/data/readmes/murimage.md",
+    "lien": "https://aedann.github.io/MurImage/",
+    "github": "https://github.com/Aedann/MurImage"
+  },
+  {
+    "titre": "Open-Ruche-Project-SE-Polytech2023",
+    "topics": [
+      "ai-on-edge",
+      "arduino",
+      "cpp",
+      "lorawan",
+      "pcb"
+    ],
+    "languages": "C++",
+    "description": "Beehive is an all-in-one embedded system for beehive monitoring with on edge AI for image processing of hornet",
+    "readme": "/data/readmes/open-ruche-project-se-polytech2023.md",
+    "lien": "",
+    "github": "https://github.com/Aedann/Open-Ruche-Project-SE-Polytech2023"
+  },
+  {
+    "titre": "OS_USER",
+    "topics": [
+      "c"
+    ],
+    "languages": "C",
+    "description": "Court projet dans la matière OS (user) où j'ai pu utiliser des threads et des sockets pour la première fois.",
+    "readme": "/data/readmes/os_user.md",
+    "lien": "",
+    "github": "https://github.com/Aedann/OS_USER"
+  },
+  {
+    "titre": "Projet-Compilateur",
+    "topics": [
+      "c",
+      "compiler",
+      "mips",
+      "no-ai-used",
+      "yacc-lex"
+    ],
+    "languages": "C",
+    "description": "MiniCC est un compilateur sommaire de langage C pour une cible MIPS.",
+    "readme": "/data/readmes/projet-compilateur.md",
+    "lien": "",
+    "github": "https://github.com/Aedann/Projet-Compilateur"
+  },
+  {
+    "titre": "ProjetReseau",
+    "topics": [],
+    "languages": "C",
+    "description": "",
+    "readme": "/data/readmes/projetreseau.md",
+    "lien": "",
+    "github": "https://github.com/Aedann/ProjetReseau"
+  },
+  {
+    "titre": "PuckApp",
+    "topics": [
+      "javascript",
+      "pwa",
+      "react",
+      "vite"
+    ],
+    "languages": "JavaScript",
+    "description": "Small PWA for a project pitch for a contest in Polytech, developped and deployed in a few hours.",
+    "readme": "/data/readmes/puckapp.md",
+    "lien": "https://mathisvermeren.github.io/PuckApp/",
+    "github": "https://github.com/Aedann/PuckApp"
+  }
+]

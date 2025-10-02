@@ -6,11 +6,20 @@ import "./styles/global.css";
 import "./styles/components.css";
 import "./styles/utilites.css";
 import "./styles/themes.css";
+import "./styles/layout.css";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>,
-);
+import { I18nProvider } from "@lingui/react";
+import { initI18n } from "./i18n/i18n";
+import { i18n } from "@lingui/core";
+
+initI18n().then(() => {
+  ReactDOM.createRoot(document.getElementById("root")!).render(
+    <React.StrictMode>
+      <BrowserRouter>
+        <I18nProvider i18n={i18n}>
+          <App />
+        </I18nProvider>
+      </BrowserRouter>
+    </React.StrictMode>,
+  );
+});

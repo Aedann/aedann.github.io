@@ -1,0 +1,22 @@
+.sommaire {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 40;
+  background-color: var(--sommaire-bg, #00000069);
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sommaire-btn {
+  background: #ffffffa9;
+  border-radius: 45%;
+  padding: 0.3rem;
+  box-shadow: var(--clay-shadow);
+  color: #ffffff;
+  transition: transform 0.2s ease;
+}
+.sommaire-btn:hover {
+  transform: scale(1.1);
+}

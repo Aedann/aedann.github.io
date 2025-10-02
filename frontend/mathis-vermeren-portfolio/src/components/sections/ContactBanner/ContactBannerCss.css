@@ -1,0 +1,58 @@
+/* .contact-footer {
+  background: var(--section-footer-bg, var(--card));
+  border-radius: var(--radius);
+  box-shadow: var(--clay-shadow);
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contact-icons img {
+  width: 28px;
+  height: 28px;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+  transition: transform 0.2s ease;
+}
+.contact-icons img:hover {
+  transform: scale(1.1);
+}
+
+.license {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.license a:hover {
+  text-decoration: underline;
+} */
+
+.contact-footer {
+  background: linear-gradient(to right, var(--section-footer-bg), transparent);
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+.contact-icons:hover {
+  opacity: 1;
+}
+
+.license {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+*/

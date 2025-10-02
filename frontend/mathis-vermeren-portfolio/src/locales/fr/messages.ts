@@ -1,0 +1,1 @@
+/*eslint-disable*/import type{Messages}from"@lingui/core";export const messages=JSON.parse("{\"6fI2E+\":[\"Petit texte introductif, qui dépend du thème choisi et s’adapte à la couleur globale.\"],\"9K9GTQ\":[\"ans\"]}")as Messages;

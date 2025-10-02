@@ -1,14 +1,16 @@
 import { useState } from "react";
-import Markdown from "markdown-to-jsx";
+import PopupReadme from "../../../components/common/PopupReadme/PopupReadme";
 import "./ProjetThumbnailCss.css";
 import Play from "../../../assets/svg/play.svg";
 import Github from "../../../assets/svg/github.svg";
 import ExternalLink from "../../../assets/svg/external-link.svg";
+import { useLingui } from "@lingui/react";
 
 interface Projet {
   titre: string;
   topics: string[];
   description: string;
+  descriptionEN: string;
   readme: string;
   categorie: "elec" | "info" | "enr" | "web" | "autres";
   wasm: boolean;
@@ -17,16 +19,20 @@ interface Projet {
 }
 
 export default function ProjetThumbnail({ projet }: { projet: Projet }) {
+  const { i18n } = useLingui();
   const [selected, setSelected] = useState<Projet | null>(null);
-
+  console.log("selected : ", selected);
   return projet.titre ? (
     <div
       key={projet.titre}
-      className={`thumbnail thumbnail-${projet.categorie}`}
-      onClick={() => setSelected(projet)}
+      className={`thumbnail thumbnail-${projet.categorie} glass-card`}
+      onClick={() => {
+        console.log("clicked");
+        setSelected(projet);
+      }}
     >
       <h3>{projet.titre}</h3>
-      <p className="desc">{projet.description}</p>
+      {i18n.locale === "fr" ? projet.description : projet.descriptionEN}
       <div className="topics">
         {Array.isArray(projet.topics) && projet.topics.length > 0 ? (
           projet.topics.map((t) => (
@@ -60,13 +66,16 @@ export default function ProjetThumbnail({ projet }: { projet: Projet }) {
       </div>
 
       {selected && (
-        <div className="popup">
-          <div className="popup-content">
-            <h2>{selected.titre}</h2>
-            <Markdown>{selected.readme}</Markdown>
-            <button onClick={() => setSelected(null)}>Fermer</button>
-          </div>
-        </div>
+        <PopupReadme
+          titre={selected.titre}
+          // readmeUrl={selected.readme}
+          readmeUrl="https://raw.githubusercontent.com/Aedann/MurImage/refs/heads/main/Readme.md"
+          onClose={() => {
+            console.log("Popup closed");
+            setSelected(null);
+          }}
+          isOpen={!!selected}
+        />
       )}
     </div>
   ) : (

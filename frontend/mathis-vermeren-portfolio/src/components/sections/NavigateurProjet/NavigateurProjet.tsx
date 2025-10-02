@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ProjetThumbnail from "../../layout/ProjetThumbnail/ProjetThumbnail";
 import "./NavigateurProjetCss.css";
+import { t } from "@lingui/core/macro";
 
 interface Projet {
   titre: string;
@@ -15,7 +16,7 @@ interface Projet {
 
 interface Props {
   projets: Projet[];
-  categorieActive?: "elec" | "info" | "enr" | "web" | "autres"; // optionnelle, pour initialiser
+  categorieActive?: "elec" | "info" | "enr" | "web" | "autres";
 }
 
 export default function NavigateurProjet({ projets, categorieActive }: Props) {
@@ -35,11 +36,11 @@ export default function NavigateurProjet({ projets, categorieActive }: Props) {
   };
 
   const varNameToString = (name: string) => {
-    if (name === "elec") return "Électronique";
-    if (name === "info") return "Informatique";
-    if (name === "enr") return "Énergies Renouvelables";
-    if (name === "web") return "Web";
-    if (name === "autres") return "Autres";
+    if (name === "elec") return t`Électronique`;
+    if (name === "info") return t`Informatique`;
+    if (name === "enr") return t`Énergies Renouvelables`;
+    if (name === "web") return t`Web`;
+    if (name === "autres") return t`Autres`;
     return name;
   };
 

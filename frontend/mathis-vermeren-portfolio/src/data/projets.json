@@ -1,22 +1,94 @@
 [
   {
-    "titre": "Ruche connectée (edge AI)",
-    "categorie": "elec",
-    "topics": ["C", "RTOS", "FPGA"],
-    "description": "Capteurs + inférence en bordure.",
-    "readme": "/data/readmes/ruche.md",
-    "wasm": true,
-    "lien": "https://www.google.fr",
-    "github": "https://github.com/Aedann/ruche"
+    "titre": "Jeu-Du-Moulin-RiscV",
+    "categorie": "info",
+    "topics": ["assembly", "c", "risc-v"],
+    "languages": "Assembly",
+    "description": "Jeu du Moulin écrit en assembleur RiscV",
+    "descriptionEN": "Nine men's morris written in RiscV assembly",
+    "readme": "/data/readmes/jeu-du-moulin-riscv.md",
+    "lien": "",
+    "github": "https://github.com/Aedann/Jeu-Du-Moulin-RiscV"
   },
   {
-    "titre": "Dashboard PV",
-    "categorie": "enr",
-    "topics": ["Python", "D3.js"],
-    "description": "Visualisation production solaire.",
-    "readme": "/data/readmes/pv.md",
-    "wasm": false,
+    "titre": "MP3_To_Midi",
+    "categorie": "info",
+    "topics": ["c", "python", "signal-processing"],
+    "languages": "MATLAB",
+    "description": "Projet traitement du signal 2023 Polytech Sorbonne",
+    "readme": "/data/readmes/mp3_to_midi.md",
     "lien": "",
-    "github": "https://github.com/Aedann/pv-dashboard"
+    "github": "https://github.com/Aedann/MP3_To_Midi"
+  },
+  {
+    "titre": "MurImage",
+    "categorie": "web",
+    "topics": ["expressjs", "godot", "nodejs", "raspberry-pi", "react"],
+    "languages": "GDScript",
+    "description": "Un mur d'affichage composé de 9 écrans pilotés par Raspberry Pi et surveillés par une application web.",
+    "descriptionEN": "A Display Wall made of 9 screens driven by Raspberry Pi and monitored by a web application.",
+    "readme": "/data/readmes/murimage.md",
+    "lien": "https://aedann.github.io/MurImage/",
+    "github": "https://github.com/Aedann/MurImage"
+  },
+  {
+    "titre": "Open-Ruche-Project-SE-Polytech2023",
+    "categorie": "elec",
+    "topics": ["ai-on-edge", "arduino", "cpp", "lorawan", "pcb"],
+    "languages": "C++",
+    "description": "Beehive is an all-in-one embedded system for beehive monitoring with on edge AI for image processing of hornet",
+    "readme": "/data/readmes/open-ruche-project-se-polytech2023.md",
+    "lien": "",
+    "github": "https://github.com/Aedann/Open-Ruche-Project-SE-Polytech2023"
+  },
+  {
+    "titre": "OS_USER",
+    "categorie": "info",
+    "topics": ["c"],
+    "languages": "C",
+    "description": "Court projet dans la matière OS (user) où j'ai pu utiliser des threads et des sockets pour la première fois.",
+    "readme": "/data/readmes/os_user.md",
+    "lien": "",
+    "github": "https://github.com/Aedann/OS_USER"
+  },
+  {
+    "titre": "Projet-Compilateur",
+    "categorie": "info",
+    "topics": ["c", "compiler", "mips", "no-ai-used", "yacc-lex"],
+    "languages": "C",
+    "description": "MiniCC est un compilateur sommaire de langage C pour une cible MIPS.",
+    "readme": "/data/readmes/projet-compilateur.md",
+    "lien": "",
+    "github": "https://github.com/Aedann/Projet-Compilateur"
+  },
+  {
+    "titre": "ProjetReseau",
+    "categorie": "info",
+    "topics": ["c", "tcp", "udp", "network"],
+    "languages": "C",
+    "description": "Systeme de transactions bancaires écrit en C sans library, en version TCP et UDP",
+    "readme": "/data/readmes/projetreseau.md",
+    "lien": "",
+    "github": "https://github.com/Aedann/ProjetReseau"
+  },
+  {
+    "titre": "PuckApp",
+    "categorie": "web",
+    "topics": ["javascript", "pwa", "react", "vite"],
+    "languages": "JavaScript",
+    "description": "Small PWA for a project pitch for a contest in Polytech, developped and deployed in a few hours.",
+    "readme": "/data/readmes/puckapp.md",
+    "lien": "https://mathisvermeren.github.io/PuckApp/",
+    "github": "https://github.com/Aedann/PuckApp"
+  },
+  {
+    "titre": "CLIP_Midi",
+    "categorie": "info",
+    "topics": [],
+    "languages": null,
+    "description": "CLIP (Contrastive Language-Image Pretraining) adapted for midi recognition",
+    "readme": "/data/readmes/clip_midi.md",
+    "lien": "",
+    "github": "https://github.com/Aedann/CLIP_Midi"
   }
 ]

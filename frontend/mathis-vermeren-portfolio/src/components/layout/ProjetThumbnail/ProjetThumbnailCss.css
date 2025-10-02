@@ -1,7 +1,6 @@
 .thumbnail {
   border-radius: 1rem;
   padding: 1rem;
-  background: var(--card);
   box-shadow:
     8px 8px 16px #0002,
     -8px -8px 16px #fff1;
@@ -9,7 +8,49 @@
     transform 0.2s,
     box-shadow 0.2s;
   cursor: pointer;
+  background-blend-mode: hard-light;
 }
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.374);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 2px 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+}
+
+.glass-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8),
+    transparent,
+    rgba(255, 255, 255, 0.3)
+  );
+}
+
 .thumbnail:hover {
   transform: translateY(-4px);
   box-shadow:
@@ -18,16 +59,12 @@
 }
 
 .thumbnail-enr {
-  background: var(--card-enr);
 }
 .thumbnail-informatique {
-  background: var(--card-info);
 }
 .thumbnail-electronique {
-  background: var(--card-elec);
 }
 .thumbnail-web {
-  background: var(--card-web);
 }
 
 .topic {
@@ -35,7 +72,8 @@
   margin: 0.2rem;
   padding: 0.2rem 0.5rem;
   border-radius: 9999px;
-  background: var(--chip-bg, #ddd);
+  background: var(--tag-bg);
+  color: var(--tag-text);
   font-size: 0.8rem;
 }
 
@@ -45,17 +83,18 @@
   gap: 0.3rem;
   padding: 0.3rem 0.6rem;
   border-radius: 0.5rem;
-  background: var(--accent);
-  color: white;
+  background: var(--button-bg);
+  color: var(--button-text);
   transition: background 0.2s;
 }
 .btn:hover {
-  background: var(--accent-hover, #444);
+  background: var(--accent, #444);
 }
 
 .popup {
   position: fixed;
   inset: 0;
+  z-index: 30;
   background: #0008;
   display: flex;
   align-items: center;
@@ -65,7 +104,7 @@
   background: var(--card);
   padding: 2rem;
   border-radius: 1rem;
-  max-width: 800px;
+  max-width: 86%;
   max-height: 90vh;
   overflow-y: auto;
 }

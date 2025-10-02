@@ -1,0 +1,83 @@
+.parallax {
+  inset: 0;
+  min-height: 170vh;
+  overflow: hidden;
+  z-index: -1;
+  background: var(--bg);
+}
+
+:root[data-theme="enr"] .parallax-enr {
+  filter: contrast(1.2) brightness(0.9);
+}
+
+:root[data-theme="enr"] .parallax-enr .layer {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform-origin: center;
+}
+
+/* Premier plan = panneaux solaires */
+:root[data-theme="enr"] .parallax-enr .layer1 {
+  background-image: url("/src/assets/svg/lake.svg");
+  transform: scale(3, 3);
+  /* transform: translateY(max(calc(var(--scroll, 0px) * -0.2), -5px)); */
+  transform: translateY(min(calc(var(--scroll, 0px) * -0.075), -5px));
+}
+
+/* Milieu eoliennes */
+:root[data-theme="enr"] .parallax-enr .layer2 {
+  background-image: url("/src/assets/svg/hills.svg");
+  /* transform: translateY(calc(var(--scroll, 0px) * -0.25)); */
+  transform: translateY(min(calc(var(--scroll, 0px) * -0.1), -5px));
+}
+
+/* Arrière-plan = montagnes + lake */
+:root[data-theme="enr"] .parallax-enr .layer3 {
+  background-image: url("/src/assets/svg/PV.svg");
+  transform: translateY(min(calc(var(--scroll, 0px) * -0.125), -5px));
+  z-index: 50;
+}
+
+:root[data-theme="enr"] .parallax-enr .layer4 {
+  z-index: 51;
+  background-color: var(--bg);
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+}
+
+/* Elec ----------------------
+
+------------------------------ */
+
+:root[data-theme="elec"] .parallax-elec {
+  position: fixed;
+  inset: 0;
+  height: 200vh;
+  overflow: hidden;
+  z-index: -1;
+  background-image: url("/src/assets/svg/electric-circuit.svg");
+  background-size: 200%;
+}
+
+:root[data-theme="elec"] .gradient {
+  background-color: var(--bg);
+  width: 100%;
+  height: 100%;
+  z-index: 51;
+  opacity: 0.5;
+}
+
+/* Web ---------------------------------------------------- */
+:root[data-theme="web"] .parallax {
+  position: fixed;
+  inset: 0;
+  height: 200vh;
+  overflow: hidden;
+  z-index: -1;
+  background-image: url("/src/assets/WebBg.png");
+  filter: brightness(0.8) saturate(0.6);
+  background-position: center calc(var(--scroll, 0px) * -0.2);
+  background-size: cover;
+}

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemple de Portfolio Responsif Mis à Jour</title>
+    <style>
+      /* Règles générales pour une bonne responsivité (rappel et ajouts) :
+              - Évitez les largeurs fixes en pixels pour les conteneurs principaux ; utilisez max-width avec % ou vw pour fluidité.
+              - Pour les grilles, utilisez CSS Grid ou Flexbox avec auto-fit/auto-fill pour adapter le nombre d'items par ligne sans fixer manuellement.
+              - Ne pas utiliser de hauteurs fixes en pixels pour les sections ; laissez le contenu dicter la hauteur.
+              - Pour les backgrounds (comme parallax), utilisez position: fixed ou absolute avec z-index négatif pour les placer derrière sans perturber le flow.
+              - Évitez les margins négatives fixes (ex: margin-top: -5%) car elles peuvent causer des chevauchements imprévus ; préférez des positions relatives ou transforms.
+              - Pour les sidebars (comme sommaire), utilisez flexbox pour les placer à côté sur grands écrans, et stack sur mobile.
+              - Ne pas fixer le nombre d'items par ligne manuellement ; utilisez repeat(auto-fit, minmax(...)) dans grid pour max 3 sur large, mais wrap sur petit.
+              - Utilisez rem pour tailles (ex: padding: 1rem) afin de scaler avec la police base (accessible pour zoom).
+              - Évitez overflow: hidden sur body/div class = "principal" sauf si nécessaire, pour permettre le scroll naturel.
+              */
+
+      body {
+        margin: 0 0 0 0;
+      }
+
+      .principal {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+        min-height: 100vh;
+        z-index: 1;
+      }
+
+      .barre-categ {
+        position: sticky;
+        display: flex;
+        justify-content: space-around;
+        background-color: #457b9d;
+        font-size: 1rem;
+        top: 0;
+        z-index: 10;
+      }
+
+      #presentation {
+        background-color: #f4a261;
+        padding: 1rem;
+        margin: 1rem auto 1rem 5%;
+        max-width: 800px;
+      }
+
+      .bloc-parcours-projets {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1200px;
+        height: 4000px;
+        margin: 0 auto;
+      }
+
+      .navigateur-projet {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .filtres {
+        display: flex;
+        justify-content: left;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+        z-index: 5;
+      }
+
+      .filtre-btn {
+        background-color: #e9c46a;
+        padding: 0.5rem 1rem;
+        margin: 0.5rem;
+      }
+
+      .projets-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        justify-content: center;
+      }
+
+      .projet-thumbnail {
+        background-color: #e76f51;
+        padding: 1rem;
+      }
+
+      #parcours {
+        background-color: #e9c46a;
+        padding: 2rem;
+        margin-top: 2rem;
+      }
+
+      .contact-banner {
+        position: relative;
+        margin-bottom: 0px;
+        margin-top: auto;
+        padding: 1rem;
+        background-color: #264653;
+      }
+
+      .sommaire {
+        position: fixed;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        z-index: 20;
+        background-color: gray;
+        padding: 0.25rem 0.25rem;
+      }
+
+      @media (min-width: 1024px) {
+        .projets-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .barre-categ {
+          font-size: 0.9rem;
+          padding: 0.5rem;
+        }
+
+        .barre-categ a {
+          padding: 0.3rem 0.6rem;
+          margin: 0.2rem;
+        }
+
+        #presentation {
+          transform: translateX(0);
+          margin: 1rem auto;
+          padding: 1rem;
+        }
+
+        .projets-grid {
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+      }
+
+      @media (max-width: 480px) {
+        .barre-categ {
+          flex-wrap: wrap;
+        }
+      }
+
+      .parallax {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        z-index: -1;
+        font-size: 1.5rem;
+        color: white;
+      }
+
+      .parallax-enr {
+        position: relative;
+        height: 100px;
+        width: 100px;
+        border: solid blue 40px;
+        filter: contrast(1.2) brightness(0.9);
+
+        background-image: url("https://www.svgrepo.com/show/298545/background.svg");
+      }
+
+      /* .layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-image: url("https://www.svgrepo.com/show/298545/background.svg");
+        transition: transform 0.1s ease-out;
+      }
+
+      .layer1 {
+        background-image: url("./src/assets/svg/lake.svg");
+        z-index: 50;
+      }
+
+      .layer2 {
+        background-image: url("https://www.svgrepo.com/show/298545/background.svg");
+        background-image: url("./src/assets/svg/hills.svg");
+        z-index: 100;
+      }
+
+      .layer3 {
+        background-image: url("./src/assets/svg/PV.svg");
+        z-index: 30;
+      }
+
+      .layer4 {
+        z-index: 51;
+        background-color: var(--bg);
+        opacity: 0.5;
+        mix-blend-mode: hard-light;
+      } */
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="parallax">
+        <div className="parallax-enr">
+          <div className="layer layer1"></div>
+          <div className="layer layer2"></div>
+          <div className="layer layer3"></div>
+          <div className="layer layer4"></div>
+        </div>
+      </div>
+      <div class="principal">
+        <nav class="barre-categ">
+          <a href="#">Energies Renouvelables</a>
+          <a href="#">Informatique</a>
+          <a href="#">Electronique</a>
+          <a href="#">Web</a>
+          <a href="#">Autres</a>
+        </nav>
+        <aside
+          class="sommaire"
+          style="height: 15vh; width: 2vw; word-wrap: break-word"
+        >
+          Sommaire
+        </aside>
+        <section id="presentation">
+          <div>
+            Bloc Presentation: Photo, Nom (Mathis Vermeren), Age (23 ans), Texte
+            introductif
+          </div>
+        </section>
+        <div class="bloc-parcours-projets">
+          <section id="projets">
+            <div class="navigateur-projet">
+              <div class="filtres">
+                <button class="filtre-btn active">
+                  Energies Renouvelables
+                </button>
+                <button class="filtre-btn">Informatique</button>
+                <button class="filtre-btn">Electronique</button>
+                <button class="filtre-btn">Web</button>
+                <button class="filtre-btn">Autres</button>
+              </div>
+              <div class="projets-grid">
+                <div class="projet-thumbnail">Moteursss</div>
+                <div class="projet-thumbnail">Assembleur</div>
+                <div class="projet-thumbnail">PCB</div>
+                <div class="projet-thumbnail">SiteWeb</div>
+                <div class="projet-thumbnail">MurImage</div>
+                <div class="projet-thumbnail">Open-Ruche-Project</div>
+              </div>
+            </div>
+          </section>
+          <section id="parcours">
+            <div style="height: 80vh">
+              Parcours Timeline: Chronologie des expériences
+            </div>
+          </section>
+        </div>
+        <div class="contact-banner">Contact Banner: Liens ou formulaire</div>
+      </div>
+    </main>
+    <script>
+      // Écouteur de défilement pour l'effet parallax
+      window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        const layers = document.querySelectorAll(".layer");
+
+        // Vitesse différente pour chaque layer (facteur de déplacement)
+        layers.forEach((layer, index) => {
+          let speedFactor;
+          switch (index) {
+            case 0: // layer1 (panneaux solaires)
+              speedFactor = 0.2;
+              break;
+            case 1: // layer2 (éoliennes)
+              speedFactor = 0.4;
+              break;
+            case 2: // layer3 (montagnes)
+              speedFactor = 0.6;
+              break;
+            case 3: // layer4 (filtre)
+              speedFactor = 0.1; // Moins de mouvement pour le filtre
+              break;
+          }
+          const offset = scrollY * speedFactor;
+          layer.style.transform = `translateY(${offset}px)`;
+        });
+      });
+
+      // Ajustement initial au chargement
+      window.addEventListener("load", () => {
+        const scrollY = window.scrollY;
+        const layers = document.querySelectorAll(".layer");
+        layers.forEach((layer, index) => {
+          let speedFactor;
+          switch (index) {
+            case 0:
+              speedFactor = 0.2;
+              break;
+            case 1:
+              speedFactor = 0.4;
+              break;
+            case 2:
+              speedFactor = 0.6;
+              break;
+            case 3:
+              speedFactor = 0.1;
+              break;
+          }
+          const offset = scrollY * speedFactor;
+          layer.style.transform = `translateY(${offset}px)`;
+        });
+      });
+    </script>
+  </body>
+</html>

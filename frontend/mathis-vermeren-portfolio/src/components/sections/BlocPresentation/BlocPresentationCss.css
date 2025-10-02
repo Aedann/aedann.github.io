@@ -1,18 +1,24 @@
 .bloc-presentation {
   background: transparent;
   color: var(--text);
-  position: relative;
-  right: 30%;
-  margin-top: 2%;
-  z-index: -3;
+  z-index: 4;
+  margin-left: 10%;
+}
+
+@media (max-width: 768px) {
+  .bloc-presentation {
+    margin-left: -5%;
+  }
 }
 
 .portrait {
-  width: 200px;
-  height: 300px;
+  width: 40%;
+  height: 55%;
+  min-width: 200px;
+  min-height: 280px;
+  margin: -50px -50px -50px -50px;
   object-fit: cover;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
   mask-image: radial-gradient(ellipse at center, white 50%, transparent 80%);
   -webkit-mask-image: radial-gradient(ellipse at center, white 50%, transparent 65%);
 }
