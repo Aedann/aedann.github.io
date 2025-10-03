@@ -4,6 +4,7 @@ import Github from "../../../assets/svg/github.svg";
 import Linkedin from "../../../assets/svg/linkedin.svg";
 import Mail from "../../../assets/svg/mail.svg";
 import { Trans } from "@lingui/react/macro";
+import type { Categories } from "../../../types.d";
 
 interface Props {
   categorieActive?: Categories;

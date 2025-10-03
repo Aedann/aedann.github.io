@@ -7,9 +7,16 @@ import globeIcon from "../../../assets/svg/globe.svg";
 import layersIcon from "../../../assets/svg/layers.svg";
 import "./BarreCategCss.css";
 import { Trans } from "@lingui/react/macro";
+import type { Categories } from "../../../types.d";
+
+type categ = {
+  key: Categories;
+  label: React.ReactNode;
+  icon: string;
+}[];
 
 export default function BarreCateg() {
-  const categories = [
+  const categ: categ = [
     { key: "enr", label: <Trans>Energies Renouvelables</Trans>, icon: sunIcon },
     { key: "info", label: <Trans>Informatique</Trans>, icon: keyboardIcon },
     { key: "elec", label: <Trans>Électronique</Trans>, icon: circuitIcon },
@@ -26,13 +33,13 @@ export default function BarreCateg() {
     document.documentElement.setAttribute("data-theme", active);
   }, [active]);
 
-  const handleClick = (key: string) => {
+  const handleClick = (key: Categories) => {
     navigate(`/?tab=${key}`);
   };
 
   const orderedCats = [
-    ...categories.filter((c) => c.key === active),
-    ...categories.filter((c) => c.key !== active),
+    ...categ.filter((c) => c.key === active),
+    ...categ.filter((c) => c.key !== active),
   ];
   return (
     <nav className="barre-categ">

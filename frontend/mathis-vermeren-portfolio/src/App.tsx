@@ -1,16 +1,16 @@
 import { useEffect } from "react";
-import { Routes, Route, useSearchParams, Navigate } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import BarreCateg from "./components/layout/BarreCateg/BarreCateg";
 import BlocPresentation from "./components/sections/BlocPresentation/BlocPresentation";
 import NavigateurProjet from "./components/sections/NavigateurProjet/NavigateurProjet";
 import ParcoursTimeline from "./components/sections/ParcoursTimeline/ParcoursTimeline";
-import type { Parcours } from "./components/layout/ParcoursThumbnail/ParcoursThumbnail";
 import ContactBanner from "./components/sections/ContactBanner/ContactBanner";
 import Sommaire from "./components/layout/Sommaire/Sommaire";
 import projetsData from "./data/projets.json";
 import parcoursData from "./data/parcours.json";
 import Parallax from "./components/ui/Parallax/Parallax";
 import LangSwitcher from "./components/layout/LangSwitcher/LangSwitcher";
+import type { Categories, Parcours } from "./types.d";
 
 import { i18n } from "@lingui/core";
 import { I18nProvider } from "@lingui/react";
@@ -18,8 +18,8 @@ import { DEFAULT_LOCALE, dynamicActivate } from "./i18n/i18n";
 
 export default function App() {
   const [params] = useSearchParams();
-  const tab = params.get("tab"); // ?tab=enr
-  const theme = (tab ?? "web").toLowerCase();
+  const tab: Categories = (params.get("tab") as Categories) ?? "enr";
+  const theme: Categories = tab ?? ("web" as Categories);
 
   const parcoursDataTyped: Parcours[] = parcoursData as Parcours[];
   useEffect(() => {
@@ -46,7 +46,7 @@ export default function App() {
               <NavigateurProjet
                 projets={projetsData.map((projet) => ({
                   ...projet,
-                  categorie: projet.categorie as "elec" | "info" | "enr" | "web" | "autres",
+                  categorie: projet.categorie as Categories,
                 }))}
               />
             </section>

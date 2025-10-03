@@ -5,18 +5,7 @@ import Play from "../../../assets/svg/play.svg";
 import Github from "../../../assets/svg/github.svg";
 import ExternalLink from "../../../assets/svg/external-link.svg";
 import { useLingui } from "@lingui/react";
-
-export interface Projet {
-  titre: string;
-  topics: string[];
-  description: string;
-  descriptionEN?: string;
-  readme: string;
-  categorie: "elec" | "info" | "enr" | "web" | "autres";
-  wasm?: boolean;
-  lien?: string;
-  github?: string;
-}
+import type { Projet } from "../../../types.d";
 
 export default function ProjetThumbnail({ projet }: { projet: Projet }) {
   const { i18n } = useLingui();

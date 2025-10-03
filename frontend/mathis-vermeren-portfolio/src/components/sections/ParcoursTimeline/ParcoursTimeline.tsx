@@ -1,7 +1,7 @@
 import ParcoursThumbnail from "../../layout/ParcoursThumbnail/ParcoursThumbnail";
 import "./ParcoursTimelineCss.css";
 import YearMarker2 from "../../../assets/svg/YearMarker3.svg";
-import type { Parcours } from "../../layout/ParcoursThumbnail/ParcoursThumbnail";
+import type { Parcours } from "../../../types.d";
 
 export default function ParcoursTimeline({ parcours }: { parcours: Parcours[] }) {
   const enriched = parcours.map((p) => {

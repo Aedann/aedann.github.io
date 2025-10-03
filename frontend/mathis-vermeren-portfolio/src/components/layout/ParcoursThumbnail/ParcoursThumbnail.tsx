@@ -6,20 +6,7 @@ import Sorbonne from "../../../assets/svg/Sorbonne.svg";
 import Dumont from "../../../assets/svg/Dumont.svg";
 import ParisCite from "../../../assets/svg/ParisCite.svg";
 import { useLingui } from "@lingui/react";
-
-export interface Parcours {
-  type: "formation" | "travail" | "benevolat";
-  titre: string;
-  etablissement: string;
-  logoName: string;
-  lieu: string;
-  date_debut: string; // YYYY-MM
-  date_fin: string;
-  description: string;
-  descriptionEN: string;
-  durationInMonths?: number;
-  side?: "left" | "right";
-}
+import type { Parcours } from "../../../types.d";
 
 const logoMap: { [key: string]: string } = {
   Freiburg: Freiburg,

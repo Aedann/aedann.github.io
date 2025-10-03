@@ -2,7 +2,7 @@ import { useState } from "react";
 import ProjetThumbnail from "../../layout/ProjetThumbnail/ProjetThumbnail";
 import "./NavigateurProjetCss.css";
 import { t } from "@lingui/core/macro";
-import type { Projet } from "../../layout/ProjetThumbnail/ProjetThumbnail";
+import type { Projet, Categories } from "../../../types.d";
 
 interface Props {
   projets: Projet[];
